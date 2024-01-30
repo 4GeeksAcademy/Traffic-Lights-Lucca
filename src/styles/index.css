@@ -1,12 +1,89 @@
+.traffic-light {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-/* 
+.light {
+  width: 80px; /* Aumenta el tamaño de los radios */
+  height: 80px; /* Aumenta el tamaño de los radios */
+  border-radius: 50%;
+  margin: 10px;
+  cursor: pointer;
+  background-color: black; /* Agrega un fondo negro para simular el tubo */
+  box-shadow: 0 0 10px #000; /* Agrega sombra para el efecto del tubo */
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
 
-*/
+.glow {
+  box-shadow: 0 0 10px #fff, 0 0 20px #ff6600, 0 0 30px #ff3300;
+}
+.purple {
+  background-color: purple;
+}
+
+
+button {
+  padding: 10px;
+  margin-top: 5px;
+}
+
+.traffic-light-box {
+  position: relative; /* Añade posición relativa para que el seudoelemento ::before se posicione correctamente */
+  background-color: black;
+  width: 120px; /* Ajusta según el tamaño deseado */
+  height: 360px; /* Ajusta según el tamaño deseado */
+  border-radius: 10px;
+  border-left: 5px solid black; /* Agrega borde izquierdo negro */
+  border-right: 5px solid black; /* Agrega borde derecho negro */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px; /* Aumenta el relleno para que los radios no estén pegados al borde */
+  margin-top: 190px; /* Ajusta según sea necesario para bajar un poco más */
+}
+
+.traffic-light-box::before {
+  content: ''; /* Agrega contenido al pseudoelemento */
+  position: absolute; /* Posiciona el pseudoelemento de manera absoluta */
+  top: -170px; /* Ajusta según sea necesario para la posición vertical */
+  left: 50%; /* Ajusta según sea necesario para la posición horizontal */
+  width: 5px; /* Ajusta según sea necesario para el ancho del "tubo" */
+  height: 200px; /* Ajusta según sea necesario para la altura del "tubo" */
+  background-color: black; /* Color del "tubo" */
+  transform: translateX(-50%); /* Centra el "tubo" horizontalmente */
+  z-index: 1; /* Coloca el "tubo" por encima del contenido del contenedor */
+}
+
+
+.tube {
+  width: 40px; /* Ajusta según el tamaño deseado del tubo */
+  height: 40px; /* Ajusta según el tamaño deseado del tubo */
+  background-color: black; /* Color del tubo */
+}
+
+
+
+
+.light-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 180px;
+}
+
+.button-container button {
+  margin: 0 5px;
+}
+
+
+
